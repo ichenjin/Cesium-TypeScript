@@ -2690,7 +2690,7 @@
     }
 
 
-    export interface PositionProperty {
+    export interface PositionProperty extends Property<Cartesian3> {
         //Members
         definitionChanged: Event;
         isConstant: boolean;
@@ -2738,7 +2738,7 @@
 
     }
 
-    export interface MaterialProperty {
+    export interface MaterialProperty extends Property<any> {
         //Members
         definitionChanged: Event;
         isConstant: boolean;
@@ -2756,7 +2756,7 @@
         dimensions?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
         outlineColor?: PropertyOrValue<any>;
         outlineWidth?: PropertyOrValue<any>;
