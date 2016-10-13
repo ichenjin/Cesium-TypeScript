@@ -10,7 +10,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <DebugType>full</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -303,6 +303,14 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="CodeExamples\Box\index.html" />
+    <Content Include="CodeExamples\Camera\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Camera\index.html" />
+    <Content Include="CodeExamples\CameraTutorial\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CameraTutorial\index.html" />
     <Content Include="CodeExamples\ImageryLayers\Earth.js">
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
@@ -375,6 +383,10 @@
     <TypeScriptCompile Include="CodeExamples\Billboards\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\Box\Earth.ts" />
     <TypeScriptCompile Include="CodeExamples\Box\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Camera\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Camera\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CameraTutorial\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CameraTutorial\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\ImageryLayers\Earth.ts" />
     <TypeScriptCompile Include="CodeExamples\ImageryLayers\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\HelloWord\Earth.ts" />
@@ -484,6 +496,14 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="CodeExamples\Box\tsconfig.json" />
+    <Content Include="CodeExamples\Camera\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Camera\tsconfig.json" />
+    <Content Include="CodeExamples\CameraTutorial\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CameraTutorial\tsconfig.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

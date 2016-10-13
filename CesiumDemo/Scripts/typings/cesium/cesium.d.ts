@@ -4084,7 +4084,7 @@
         getInputAction(type: number, modifier?: number): void;
         isDestroyed(): boolean;
         removeInputAction(type: number, modifier?: number): void;
-        setInputAction(action: (() => void), type: number, modifier?: number): void;
+        setInputAction(action: Function, type: number, modifier?: number): void;
 
     }
 
