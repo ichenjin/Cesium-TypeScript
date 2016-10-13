@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Atmospher eColor</title>
+    <meta charset="utf-8" />
+    <style>
+        @import url('../../Content/default.css');
+
+        #toolbar {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+            #toolbar input {
+                vertical-align: middle;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+    </style>
+    <script src="../../Cesium/Cesium.js"></script>
+    <script src="../Sandcastle/Sandcastle.js"></script>
+</head>
+<body>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="toolbar">
+        <table>
+            <tbody>
+                <tr>
+                    <td>hueShift</td>
+                    <td>
+                        <input type="range" min="-1" max="1" step="0.01" data-bind="value: hueShift, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: hueShift">
+                    </td>
+                </tr>
+                <tr>
+                    <td>saturationShift</td>
+                    <td>
+                        <input type="range" min="-1" max="1" step="0.01" data-bind="value: saturationShift, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: saturationShift">
+                    </td>
+                </tr>
+                <tr>
+                    <td>brightnessShift</td>
+                    <td>
+                        <input type="range" min="-1" max="1" step="0.01" data-bind="value: brightnessShift, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: brightnessShift">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="toggleLighting"></div>
+        <div id="toggleFog"></div>
+    </div>
+    <script src="Earth.js"></script>
+</body>
+</html>

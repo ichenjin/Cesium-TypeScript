@@ -1,0 +1,4 @@
+Cesium 1.26
+2016-10-03
+
+http://cesiumjs.org/downloads.html

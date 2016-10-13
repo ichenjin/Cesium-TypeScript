@@ -1,0 +1,6 @@
+D:\Chenjin\Documents\GitHub\Cesium-TypeScript\CesiumDemo\obj\Debug\CesiumDemo.csprojResolveAssemblyReference.cache
+D:\Chenjin\Documents\GitHub\Cesium-TypeScript\CesiumDemo\bin\CesiumDemo.dll.config
+D:\Chenjin\Documents\GitHub\Cesium-TypeScript\CesiumDemo\bin\CesiumDemo.dll
+D:\Chenjin\Documents\GitHub\Cesium-TypeScript\CesiumDemo\bin\CesiumDemo.pdb
+D:\Chenjin\Documents\GitHub\Cesium-TypeScript\CesiumDemo\obj\Debug\CesiumDemo.dll
+D:\Chenjin\Documents\GitHub\Cesium-TypeScript\CesiumDemo\obj\Debug\CesiumDemo.pdb
