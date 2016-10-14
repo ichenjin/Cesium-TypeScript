@@ -367,6 +367,18 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="CodeExamples\GroundClamping\index.html" />
+    <Content Include="CodeExamples\CZMLBillboardAndLabel\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CZMLBillboardAndLabel\index.html" />
+    <Content Include="CodeExamples\WebMapService\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\WebMapService\index.html" />
+    <Content Include="CodeExamples\Wall\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Wall\index.html" />
     <Content Include="CodeExamples\Video\Earth.js">
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
@@ -561,6 +573,12 @@
     <TypeScriptCompile Include="CodeExamples\GeometryAndAppearances\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\GroundClamping\Earth.ts" />
     <TypeScriptCompile Include="CodeExamples\GroundClamping\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CZMLBillboardAndLabel\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CZMLBillboardAndLabel\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\WebMapService\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\WebMapService\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Wall\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Wall\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\Video\Earth.ts" />
     <TypeScriptCompile Include="CodeExamples\Video\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\TerrainExaggeration\Earth.ts" />
@@ -866,6 +884,18 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="CodeExamples\Video\tsconfig.json" />
+    <Content Include="CodeExamples\Wall\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Wall\tsconfig.json" />
+    <Content Include="CodeExamples\WebMapService\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\WebMapService\tsconfig.json" />
+    <Content Include="CodeExamples\CZMLBillboardAndLabel\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CZMLBillboardAndLabel\tsconfig.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

@@ -4595,6 +4595,9 @@
         numberOfVerticalLines?: number;
     }
 
+    export interface CzmlDataSourceLoadOptions {
+        sourceUri?: string;
+    }
 
     export class CzmlDataSource implements DataSource {
         constructor(name?: string);
@@ -4612,27 +4615,14 @@
 
 
         //Methods
-        static load(data: string | any, options?: loadOptions): Promise<CzmlDataSource>;
+        static load(data: string | any, options?: CzmlDataSourceLoadOptions): Promise<CzmlDataSource>;
         static processMaterialPacketData(object: any, propertyName: string, packetData: any, interval: TimeInterval, sourceUri: string, entityCollection: EntityCollection): void;
         static processPacketData(type: (() => void), object: any, propertyName: string, packetData: any, interval: TimeInterval, sourceUri: string, entityCollection: EntityCollection): void;
         static processPositionPacketData(object: any, propertyName: string, packetData: any, interval: TimeInterval, sourceUri: string, entityCollection: EntityCollection): void;
-        load(czml: string | any, options?: loadOptions): Promise<CzmlDataSource>;
+        load(czml: string | any, options?: CzmlDataSourceLoadOptions): Promise<CzmlDataSource>;
         process(czml: string | any, options?: processOptions): Promise<CzmlDataSource>;
         update(time: JulianDate): boolean;
     }
-
-
-    export interface loadOptions {
-        sourceUri?: string;
-        markerSize?: number;
-        markerSymbol?: string;
-        markerColor?: Color;
-        stroke?: Color;
-        strokeWidth?: number;
-        fill?: Color;
-        clampToGround?: boolean;
-    }
-
 
     export interface processOptions {
         sourceUri?: string;
@@ -4651,7 +4641,7 @@
         add(dataSource: DataSource | Promise<DataSource>): Promise<DataSource>;
         contains(dataSource: DataSource): boolean;
         destroy(): void;
-        get(index: number): void;
+        get(index: number): DataSource;
         indexOf(dataSource: DataSource): number;
         isDestroyed(): boolean;
         remove(dataSource: DataSource, destroy?: boolean): boolean;
@@ -5310,6 +5300,29 @@
     }
 
 
+    export interface GeoJsonDataSourceStaticLoadOptions {
+        sourceUri?: string;
+        markerSize?: number;
+        markerSymbol?: string;
+        markerColor?: Color;
+        stroke?: Color;
+        strokeWidth?: number;
+        fill?: Color;
+        clampToGround?: boolean;
+    }
+
+    export interface GeoJsonDataSourceLoadOptions {
+        sourceUri?: string;
+        markerSize?: number;
+        markerSymbol?: string;
+        markerColor?: Color;
+        stroke?: Color;
+        strokeWidth?: number;
+        fill?: Color;
+        clampToGround?: boolean;
+        describe?: (properties: any, nameProperty: string) => void;
+    }
+
     export class GeoJsonDataSource implements DataSource {
         constructor(name?: string);
         //Members
@@ -5335,8 +5348,8 @@
 
 
         //Methods
-        static load(data: string | any, options?: loadOptions): Promise<GeoJsonDataSource>;
-        load(data: string | any, options?: loadOptions): Promise<GeoJsonDataSource>;
+        static load(data: string | any, options?: GeoJsonDataSourceStaticLoadOptions): Promise<GeoJsonDataSource>;
+        load(data: string | any, options?: GeoJsonDataSourceLoadOptions): Promise<GeoJsonDataSource>;
         update(time: JulianDate): boolean;
     }
 
@@ -5857,6 +5870,19 @@
     }
 
 
+    export interface KmlDataSourceStaticLoadOptions {
+        camera?: Camera;
+        canvas?: HTMLCanvasElement;
+        proxy?: DefaultProxy;
+        sourceUri?: string;
+        clampToGround?: boolean;
+    }
+
+    export interface KmlDataSourceLoadOptions {
+        sourceUri?: string;
+        clampToGround?: boolean;
+    }
+
     export class KmlDataSource implements DataSource {
         constructor();
         //Members
@@ -5874,8 +5900,8 @@
 
 
         //Methods
-        static load(data: string | Document | Blob, options?: loadOptions): Promise<KmlDataSource>;
-        load(data: string | Document | Blob, options?: loadOptions): Promise<KmlDataSource>;
+        static load(data: string | Document | Blob, options?: KmlDataSourceStaticLoadOptions): Promise<KmlDataSource>;
+        load(data: string | Document | Blob, options?: KmlDataSourceLoadOptions): Promise<KmlDataSource>;
         update(time: JulianDate): boolean;
 
     }
