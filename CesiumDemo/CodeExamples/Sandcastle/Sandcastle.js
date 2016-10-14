@@ -40,12 +40,12 @@ var Sandcastle;
             var option = document.createElement("option");
             option.text = item.text;
             option.value = item.value;
-            select.options.add(option);
+            select.add(option);
         });
         select.addEventListener("change", function () {
             if (Sandcastle.reset)
                 Sandcastle.reset();
-            var optionsItem = options[select.options.selectedIndex];
+            var optionsItem = options[select.selectedIndex];
             if (optionsItem.onselect)
                 optionsItem.onselect();
         });

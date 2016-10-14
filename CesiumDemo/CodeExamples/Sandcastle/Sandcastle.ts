@@ -40,13 +40,13 @@ namespace Sandcastle {
             let option = document.createElement("option");
             option.text = item.text;
             option.value = item.value;
-            select.options.add(option);
+            select.add(option);
         })
 
         select.addEventListener("change", () => {
             if (Sandcastle.reset)
                 Sandcastle.reset();
-            let optionsItem = options[select.options.selectedIndex];
+            let optionsItem = options[select.selectedIndex];
             if (optionsItem.onselect)
                 optionsItem.onselect();
         });
