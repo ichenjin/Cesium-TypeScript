@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Clustering</title>
+    <meta charset="utf-8" />
+    <style>
+        @import url('../../Content/default.css');
+
+        #toolbar {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+            #toolbar input {
+                vertical-align: middle;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+    </style>
+    <script src="../../Cesium/Cesium.js"></script>
+    <script src="../Sandcastle/Sandcastle.js"></script>
+</head>
+<body>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="toolbar">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Pixel Range</td>
+                    <td>
+                        <input type="range" min="1" max="200" step="1" data-bind="value: pixelRange, valueUpdate: 'input'">
+                        <input type="text" size="2" data-bind="value: pixelRange">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Minimum Cluster Size</td>
+                    <td>
+                        <input type="range" min="2" max="20" step="1" data-bind="value: minimumClusterSize, valueUpdate: 'input'">
+                        <input type="text" size="2" data-bind="value: minimumClusterSize">
+                    </td>
+                </tr>
+                <tr><td><input type="checkbox" data-bind="checked: enabled">Enabled</td></tr>
+                <tr><td><input type="checkbox" data-bind="checked: customStyle">Custom Styling</td></tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Earth.js"></script>
+</body>
+</html>

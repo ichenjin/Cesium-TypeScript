@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Terrain</title>
+    <meta charset="utf-8" />
+    <style>
+        @import url('../../Content/default.css');
+    </style>
+    <script src="../../Cesium/Cesium.js"></script>
+    <script src="../Sandcastle/Sandcastle.js"></script>
+</head>
+<body>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="toolbar">
+        <div id="terrainMenu"></div>
+        <div id="zoomButtons"></div>
+        <div id="toggleLighting"></div>
+        <div id="sampleButtons"></div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Enable fog</td>
+                    <td><input type="checkbox" data-bind="checked: fogEnabled"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Earth.js"></script>
+</body>
+</html>

@@ -6,6 +6,12 @@ var Sandcastle = (function () {
 var Sandcastle;
 (function (Sandcastle) {
     var _toolbarElem;
+    function invoke(func) {
+        if (Sandcastle.reset)
+            Sandcastle.reset();
+        if (func)
+            func();
+    }
     function getToolBar() {
         if (!_toolbarElem) {
             _toolbarElem = document.getElementById("toolbar");
@@ -29,13 +35,24 @@ var Sandcastle;
         else {
             getToolBar().appendChild(button);
         }
-        button.addEventListener("click", function () { return onclick(); });
+        button.addEventListener("click", function () { return invoke(onclick); });
     }
     Sandcastle.addToolbarButton = addToolbarButton;
-    function addToolbarMenu(options) {
+    function addDefaultToolbarButton(text, onclick, containerId) {
+        addToolbarButton(text, onclick, containerId);
+        onclick();
+    }
+    Sandcastle.addDefaultToolbarButton = addDefaultToolbarButton;
+    function addToolbarMenu(options, containerId) {
         var select = document.createElement("select");
         select.className = "cesium-button";
-        getToolBar().appendChild(select);
+        if (containerId) {
+            var container = document.getElementById(containerId);
+            container.appendChild(select);
+        }
+        else {
+            getToolBar().appendChild(select);
+        }
         options.forEach(function (item) {
             var option = document.createElement("option");
             option.text = item.text;
@@ -43,15 +60,18 @@ var Sandcastle;
             select.add(option);
         });
         select.addEventListener("change", function () {
-            if (Sandcastle.reset)
-                Sandcastle.reset();
             var optionsItem = options[select.selectedIndex];
-            if (optionsItem.onselect)
-                optionsItem.onselect();
+            invoke(optionsItem.onselect);
         });
         if (options[0].onselect)
             options[0].onselect();
     }
     Sandcastle.addToolbarMenu = addToolbarMenu;
+    function highlight(args) {
+    }
+    Sandcastle.highlight = highlight;
+    function declare(args) {
+    }
+    Sandcastle.declare = declare;
 })(Sandcastle || (Sandcastle = {}));
 //# sourceMappingURL=Sandcastle.js.map

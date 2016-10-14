@@ -1247,12 +1247,12 @@
         //Methods
         completeMorph(): void;
         destroy(): void;
-        drillPick(windowPosition: Cartesian2, limit?: number): Array<Object>;
+        drillPick(windowPosition: Cartesian2, limit?: number): Array<any>;
         isDestroyed(): boolean;
         morphTo2D(duration?: number): void;
         morphTo3D(duration?: number): void;
         morphToColumbusView(duration?: number): void;
-        pick(windowPosition: Cartesian2): Object;
+        pick(windowPosition: Cartesian2): any;
         pickPosition(windowPosition: Cartesian2, result?: Cartesian3): Cartesian3;
 
     }
@@ -2116,17 +2116,24 @@
     }
 
 
-    export class ShadowMode {
-        constructor();
-        //Members
-        static CAST_ONLY: number;
-        static DISABLED: number;
-        static ENABLED: number;
-        static RECEIVE_ONLY: number;
+    //export class ShadowMode {
+    //    constructor();
+    //    //Members
+    //    static CAST_ONLY: number;
+    //    static DISABLED: number;
+    //    static ENABLED: number;
+    //    static RECEIVE_ONLY: number;
 
 
-        //Methods
+    //    //Methods
 
+    //}
+
+    export enum ShadowMode {
+        DISABLED = 0,
+        ENABLED = 1,
+        CAST_ONLY = 2,
+        RECEIVE_ONLY = 3,
     }
 
 
@@ -2267,16 +2274,22 @@
     }
 
 
-    export class HeightReference {
-        constructor();
-        //Members
-        static CLAMP_TO_GROUND: number;
-        static NONE: number;
-        static RELATIVE_TO_GROUND: number;
+    //export class HeightReference {
+    //    constructor();
+    //    //Members
+    //    static CLAMP_TO_GROUND: number;
+    //    static NONE: number;
+    //    static RELATIVE_TO_GROUND: number;
 
 
-        //Methods
+    //    //Methods
 
+    //}
+
+    export enum HeightReference {
+        NONE = 0,
+        CLAMP_TO_GROUND = 1,
+        RELATIVE_TO_GROUND = 2,
     }
 
 
@@ -2359,20 +2372,19 @@
         constructor(options?: BillboardGraphicsOptions);
         //Members
         alignedAxis: Property<any>;
-        color: PropertyOrValue<Color>;
+        color: Property<Color>;
         definitionChanged: Event;
         distanceDisplayCondition: Property<any>;
-        //distanceDisplayCondition: Property<any>;
         eyeOffset: Property<any>;
         height: Property<any>;
-        heightReference: Property<any>;
+        heightReference: Property<HeightReference>;
         horizontalOrigin: Property<any>;
         image: Property<any>;
         imageSubRegion: Property<any>;
         pixelOffset: Property<any>;
         pixelOffsetScaleByDistance: Property<any>;
         rotation: Property<any>;
-        scale: PropertyOrValue<number>;
+        scale: Property<number>;
         scaleByDistance: Property<any>;
         show: Property<any>;
         sizeInMeters: Property<any>;
@@ -2396,10 +2408,9 @@
 
         //Methods
         equals(other?: Property<any>): boolean;
-        getValue(time: JulianDate, result?: any): Object;
+        getValue(time: JulianDate, result?: any): T;
 
     }
-
 
     export interface BillboardGraphicsOptions {
         image?: any;
@@ -2419,7 +2430,7 @@
         pixelOffsetScaleByDistance?: PropertyOrValue<any>;
         imageSubRegion?: PropertyOrValue<any>;
         sizeInMeters?: PropertyOrValue<any>;
-        heightReference?: PropertyOrValue<any>;
+        heightReference?: PropertyOrValue<HeightReference>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2630,7 +2641,7 @@
         label: LabelGraphics;
         model: ModelGraphics;
         name: string;
-        orientation: Property<any>;
+        orientation: Property<Quaternion>;
         parent: Entity;
         path: PathGraphics;
         point: PointGraphics;
@@ -2728,7 +2739,7 @@
         outline: Property<any>;
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
 
 
@@ -2758,9 +2769,9 @@
         fill?: PropertyOrValue<any>;
         material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2780,7 +2791,7 @@
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         positions: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         width: Property<any>;
 
@@ -2800,12 +2811,12 @@
         extrudedHeight?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2823,7 +2834,7 @@
         outline: Property<any>;
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         slices: Property<any>;
         topRadius: Property<any>;
@@ -2842,13 +2853,13 @@
         bottomRadius?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         numberOfVerticalLines?: PropertyOrValue<any>;
         slices?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2870,7 +2881,7 @@
         rotation: Property<any>;
         semiMajorAxis: Property<any>;
         semiMinorAxis: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         stRotation: Property<any>;
 
@@ -2889,15 +2900,15 @@
         extrudedHeight?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         numberOfVerticalLines?: PropertyOrValue<any>;
         rotation?: PropertyOrValue<any>;
         stRotation?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2913,7 +2924,7 @@
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         radii: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         slicePartitions: Property<any>;
         stackPartitions: Property<any>;
@@ -2931,14 +2942,14 @@
         radii?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         subdivisions?: PropertyOrValue<any>;
         stackPartitions?: PropertyOrValue<any>;
         slicePartitions?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2948,19 +2959,19 @@
         //Members
         definitionChanged: Event;
         distanceDisplayCondition: Property<any>;
-        eyeOffset: Property<any>;
+        eyeOffset: PositionProperty;
         fillColor: Property<any>;
         font: Property<any>;
-        heightReference: Property<any>;
+        heightReference: Property<HeightReference>;
         horizontalOrigin: Property<any>;
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         pixelOffset: Property<any>;
         pixelOffsetScaleByDistance: Property<any>;
-        scale: Property<any>;
-        show: Property<any>;
+        scale: Property<number>;
+        show: Property<boolean>;
         style: Property<any>;
-        text: Property<any>;
+        text: Property<string>;
         translucencyByDistance: Property<any>;
         verticalOrigin: Property<any>;
 
@@ -2976,8 +2987,8 @@
         text?: PropertyOrValue<any>;
         font?: PropertyOrValue<any>;
         style?: PropertyOrValue<any>;
-        fillColor?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        fillColor?: PropertyOrValue<Color>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         scale?: PropertyOrValue<any>;
@@ -2987,7 +2998,7 @@
         pixelOffset?: PropertyOrValue<any>;
         translucencyByDistance?: PropertyOrValue<any>;
         pixelOffsetScaleByDistance?: PropertyOrValue<any>;
-        heightReference?: PropertyOrValue<any>;
+        heightReference?: PropertyOrValue<HeightReference>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -2997,14 +3008,14 @@
         //Members
         definitionChanged: Event;
         distanceDisplayCondition: Property<any>;
-        heightReference: Property<any>;
+        heightReference: Property<HeightReference>;
         incrementallyLoadTextures: Property<any>;
         maximumScale: Property<any>;
         minimumPixelSize: Property<any>;
         nodeTransformations: PropertyBag;
         runAnimations: Property<any>;
         scale: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         uri: Property<any>;
 
@@ -3025,8 +3036,8 @@
         incrementallyLoadTextures?: PropertyOrValue<any>;
         runAnimations?: PropertyOrValue<any>;
         nodeTransformations?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
-        heightReference?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
+        heightReference?: PropertyOrValue<HeightReference>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3076,7 +3087,7 @@
         trailTime?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         width?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         resolution?: PropertyOrValue<any>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
@@ -3088,7 +3099,7 @@
         color: Property<any>;
         definitionChanged: Event;
         distanceDisplayCondition: Property<any>;
-        heightReference: Property<any>;
+        heightReference: Property<HeightReference>;
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         pixelSize: Property<any>;
@@ -3107,12 +3118,12 @@
     export interface PointGraphicsOptions {
         color?: PropertyOrValue<any>;
         pixelSize?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         scaleByDistance?: PropertyOrValue<any>;
         translucencyByDistance?: PropertyOrValue<any>;
-        heightReference?: PropertyOrValue<any>;
+        heightReference?: PropertyOrValue<HeightReference>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3123,17 +3134,17 @@
         closeBottom: Property<any>;
         closeTop: Property<any>;
         definitionChanged: Event;
-        extrudedHeight: Property<any>;
+        extrudedHeight: Property<number>;
         fill: Property<any>;
         granularity: Property<any>;
         height: Property<any>;
         hierarchy: Property<any>;
         material: MaterialProperty;
-        outline: Property<any>;
+        outline: Property<boolean>;
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         perPositionHeight: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         stRotation: Property<any>;
 
@@ -3151,16 +3162,16 @@
         extrudedHeight?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         stRotation?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
         perPositionHeight?: PropertyOrValue<any>;
         closeTop?: boolean;
         closeBottom?: boolean;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3174,7 +3185,7 @@
         granularity: Property<any>;
         material: MaterialProperty;
         positions: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         width: Property<any>;
 
@@ -3191,9 +3202,9 @@
         followSurface?: PropertyOrValue<any>;
         width?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3211,7 +3222,7 @@
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         positions: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         shape: Property<any>;
         show: Property<any>;
 
@@ -3224,17 +3235,17 @@
 
 
     export interface PolylineVolumeGraphicsOptions {
-        positions?: PropertyOrValue<any>;
-        shape?: PropertyOrValue<any>;
+        positions?: PropertyOrValue<Array<Cartesian3>>;
+        shape?: PropertyOrValue<Array<Cartesian2>>;
         cornerType?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3256,7 +3267,7 @@
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         rotation: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
         stRotation: Property<any>;
 
@@ -3276,14 +3287,14 @@
         closeBottom?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         rotation?: PropertyOrValue<any>;
         stRotation?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3302,7 +3313,7 @@
         outlineColor: Property<any>;
         outlineWidth: Property<any>;
         positions: Property<any>;
-        shadows: Property<any>;
+        shadows: Property<ShadowMode>;
         show: Property<any>;
 
 
@@ -3319,12 +3330,12 @@
         minimumHeights?: PropertyOrValue<any>;
         show?: PropertyOrValue<any>;
         fill?: PropertyOrValue<any>;
-        material?: MaterialProperty;
+        material?: PropertyOrValue<any>;
         outline?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
         granularity?: PropertyOrValue<any>;
-        shadows?: PropertyOrValue<any>;
+        shadows?: PropertyOrValue<ShadowMode>;
         distanceDisplayCondition?: PropertyOrValue<any>;
     }
 
@@ -3354,6 +3365,7 @@
         polylineVolume?: PolylineVolumeGraphics | PolylineVolumeGraphicsOptions;
         rectangle?: RectangleGraphics | RectangleGraphicsOptions;
         wall?: WallGraphics | WallGraphicsOptions;
+        [x: string]: any;   //Custom property
     }
 
 
@@ -3483,7 +3495,7 @@
     }
 
 
-    export class BoxGeometry {
+    export class BoxGeometry extends Geometry {
         constructor(options?: BoxGeometryOptions);
         //Members
         static packedLength: number;
@@ -3758,9 +3770,9 @@
     }
 
 
-    export class CallbackProperty implements Property<any>
+    export class CallbackProperty<T> implements Property<T>
     {
-        constructor(callback: any, isConstant: boolean);
+        constructor(callback: (time?: JulianDate, result?: T) => T, isConstant: boolean);
         //Members
         definitionChanged: Event;
         isConstant: boolean;
@@ -3768,8 +3780,8 @@
 
         //Methods
         equals(other?: Property<any>): boolean;
-        getValue(time?: JulianDate, result?: any): Object;
-        setCallback(callback: any, isConstant: boolean): void;
+        getValue(time?: JulianDate, result?: T): T;
+        setCallback(callback: (time?: JulianDate, result?: T) => T, isConstant: boolean): void;
 
     }
 
@@ -4108,13 +4120,13 @@
 
 
     export interface CheckerboardMaterialPropertyOptions {
-        evenColor?: PropertyOrValue<any>;
-        oddColor?: PropertyOrValue<any>;
+        evenColor?: PropertyOrValue<Color>;
+        oddColor?: PropertyOrValue<Color>;
         repeat?: PropertyOrValue<any>;
     }
 
 
-    export class CircleGeometry {
+    export class CircleGeometry extends Geometry {
         constructor(options?: CircleGeometryOptions);
         //Members
         static packedLength: number;
@@ -4186,7 +4198,7 @@
 
 
     export class ColorMaterialProperty implements MaterialProperty {
-        constructor(color?: Property<Color>);
+        constructor(color?: PropertyOrValue<Color>);
         //Members
         color: Property<Color>;
         definitionChanged: Event;
@@ -4272,7 +4284,7 @@
 
     export class ConstantProperty<T> implements Property<T>
     {
-        constructor(value?: any);
+        constructor(value?: T);
         //Members
         definitionChanged: Event;
         isConstant: boolean;
@@ -4612,6 +4624,13 @@
 
     export interface loadOptions {
         sourceUri?: string;
+        markerSize?: number;
+        markerSymbol?: string;
+        markerColor?: Color;
+        stroke?: Color;
+        strokeWidth?: number;
+        fill?: Color;
+        clampToGround?: boolean;
     }
 
 
@@ -4821,7 +4840,7 @@
     }
 
 
-    export class EllipseGeometry {
+    export class EllipseGeometry extends Geometry {
         constructor(options?: EllipseGeometryOptions);
         //Members
         static packedLength: number;
@@ -4928,7 +4947,7 @@
     }
 
 
-    export class EllipsoidGeometry {
+    export class EllipsoidGeometry extends Geometry {
         constructor(options?: EllipsoidGeometryOptions);
         //Members
         static packedLength: number;
@@ -5903,7 +5922,7 @@
         font: string;
         heightReference: HeightReference;
         horizontalOrigin: HorizontalOrigin;
-        id: Object;
+        id: any;
         outlineColor: Color;
         outlineWidth: number;
         pixelOffset: Cartesian2;
@@ -6710,7 +6729,7 @@
     }
 
 
-    export class PolygonGeometry {
+    export class PolygonGeometry extends Geometry {
         constructor(options?: PolygonGeometryOptions);
         //Members
         packedLength: number;
@@ -6853,7 +6872,7 @@
 
 
     export class PolylineArrowMaterialProperty implements MaterialProperty {
-        constructor(color?: Property<any>);
+        constructor(color?: PropertyOrValue<Color>);
         //Members
         color: Property<any>;
         definitionChanged: Event;
@@ -7055,7 +7074,7 @@
 
     export interface PolylineOutlineMaterialPropertyOptions {
         color?: PropertyOrValue<any>;
-        outlineColor?: PropertyOrValue<any>;
+        outlineColor?: PropertyOrValue<Color>;
         outlineWidth?: PropertyOrValue<any>;
     }
 
@@ -7324,7 +7343,7 @@
     }
 
 
-    export class RectangleGeometry {
+    export class RectangleGeometry extends Geometry {
         constructor(options?: RectangleGeometryOptions);
         //Members
         static packedLength: number;
@@ -7681,7 +7700,7 @@
     }
 
 
-    export class SimplePolylineGeometry {
+    export class SimplePolylineGeometry extends Geometry {
         constructor(options?: SimplePolylineGeometryOptions);
         //Members
         packedLength: number;
@@ -7856,8 +7875,8 @@
 
 
     export interface StripeMaterialPropertyOptions {
-        evenColor?: PropertyOrValue<any>;
-        oddColor?: PropertyOrValue<any>;
+        evenColor?: PropertyOrValue<Color>;
+        oddColor?: PropertyOrValue<Color>;
         repeat?: PropertyOrValue<any>;
         offset?: PropertyOrValue<any>;
         orientation?: PropertyOrValue<any>;
@@ -8341,7 +8360,7 @@
     }
 
 
-    export class WallGeometry {
+    export class WallGeometry extends Geometry {
         constructor(options?: WallGeometryOptions);
         //Members
         packedLength: number;

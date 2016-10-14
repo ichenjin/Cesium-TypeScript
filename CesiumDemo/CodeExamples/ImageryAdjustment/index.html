@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Imagery Adjustment</title>
+    <meta charset="utf-8" />
+    <style>
+        @import url('../../Content/default.css');
+
+        #toolbar {
+            background: rgba(42, 42, 42, 0.8);
+            padding: 4px;
+            border-radius: 4px;
+        }
+
+            #toolbar input {
+                vertical-align: middle;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+    </style>
+    <script src="../../Cesium/Cesium.js"></script>
+    <script src="../Sandcastle/Sandcastle.js"></script>
+</head>
+<body>
+    <div id="cesiumContainer" class="fullSize"></div>
+    <div id="toolbar">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Brightness</td>
+                    <td>
+                        <input type="range" min="0" max="3" step="0.02" data-bind="value: brightness, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: brightness">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Contrast</td>
+                    <td>
+                        <input type="range" min="0" max="3" step="0.02" data-bind="value: contrast, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: contrast">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hue</td>
+                    <td>
+                        <input type="range" min="0" max="3" step="0.02" data-bind="value: hue, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: hue">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Saturation</td>
+                    <td>
+                        <input type="range" min="0" max="3" step="0.02" data-bind="value: saturation, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: saturation">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gamma</td>
+                    <td>
+                        <input type="range" min="0" max="3" step="0.02" data-bind="value: gamma, valueUpdate: 'input'">
+                        <input type="text" size="5" data-bind="value: gamma">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="Earth.js"></script>
+</body>
+</html>

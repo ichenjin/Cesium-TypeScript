@@ -311,6 +311,150 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="CodeExamples\CameraTutorial\index.html" />
+    <Content Include="CodeExamples\CardBoard\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CardBoard\index.html" />
+    <Content Include="CodeExamples\CesiumInspector\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CesiumInspector\index.html" />
+    <Content Include="CodeExamples\CesiumWidget\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CesiumWidget\index.html" />
+    <Content Include="CodeExamples\CirclesAndEllipses\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CirclesAndEllipses\index.html" />
+    <Content Include="CodeExamples\Clustering\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Clustering\index.html" />
+    <Content Include="CodeExamples\Corridor\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Corridor\index.html" />
+    <Content Include="CodeExamples\CustomDataSource\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CustomDataSource\index.html" />
+    <Content Include="CodeExamples\CylindersAndCones\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CylindersAndCones\index.html" />
+    <Content Include="CodeExamples\CZML\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CZML\index.html" />
+    <Content Include="CodeExamples\DistanceDisplayConditions\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\DistanceDisplayConditions\index.html" />
+    <Content Include="CodeExamples\GeoJsonAndTopJson\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GeoJsonAndTopJson\index.html" />
+    <Content Include="CodeExamples\GeoJsonSimpleStyle\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GeoJsonSimpleStyle\index.html" />
+    <Content Include="CodeExamples\GeometryAndAppearances\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GeometryAndAppearances\index.html" />
+    <Content Include="CodeExamples\GroundClamping\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GroundClamping\index.html" />
+    <Content Include="CodeExamples\Video\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Video\index.html" />
+    <Content Include="CodeExamples\TerrainExaggeration\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\TerrainExaggeration\index.html" />
+    <Content Include="CodeExamples\Terrain\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Terrain\index.html" />
+    <Content Include="CodeExamples\StartBurst\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\StartBurst\index.html" />
+    <Content Include="CodeExamples\SpheresAndEllipsoids\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\SpheresAndEllipsoids\index.html" />
+    <Content Include="CodeExamples\ShowOrHideEntities\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\ShowOrHideEntities\index.html" />
+    <Content Include="CodeExamples\Shadows\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Shadows\index.html" />
+    <Content Include="CodeExamples\Rotatable2DMap\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Rotatable2DMap\index.html" />
+    <Content Include="CodeExamples\Rectangle\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Rectangle\index.html" />
+    <Content Include="CodeExamples\PolylineVolume\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\PolylineVolume\index.html" />
+    <Content Include="CodeExamples\Polyline\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Polyline\index.html" />
+    <Content Include="CodeExamples\Polygon\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Polygon\index.html" />
+    <Content Include="CodeExamples\Point\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Point\index.html" />
+    <Content Include="CodeExamples\Picking\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Picking\index.html" />
+    <Content Include="CodeExamples\PATerrain\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\PATerrain\index.html" />
+    <Content Include="CodeExamples\Material\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Material\index.html" />
+    <Content Include="CodeExamples\MapPins\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\MapPins\index.html" />
+    <Content Include="CodeExamples\Label\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Label\index.html" />
+    <Content Include="CodeExamples\KML\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\KML\index.html" />
+    <Content Include="CodeExamples\Interpolation\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Interpolation\index.html" />
+    <Content Include="CodeExamples\ImageryLayersManipulation\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\ImageryLayersManipulation\index.html" />
+    <Content Include="CodeExamples\ImageryAdjustment\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\ImageryAdjustment\index.html" />
     <Content Include="CodeExamples\ImageryLayers\Earth.js">
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
@@ -369,6 +513,8 @@
     <Content Include="SampleData\models\CesiumGround\images\1_Cesium_Ground-body.jpg" />
     <Content Include="SampleData\models\CesiumMan\Cesium_Man.jpg" />
     <Content Include="SampleData\models\CesiumMilkTruck\CesiumMilkTruck.png" />
+    <Content Include="Scripts\r.js" />
+    <Content Include="Scripts\require.js" />
     <Content Include="web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -387,6 +533,78 @@
     <TypeScriptCompile Include="CodeExamples\Camera\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\CameraTutorial\Earth.ts" />
     <TypeScriptCompile Include="CodeExamples\CameraTutorial\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CardBoard\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CardBoard\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CesiumInspector\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CesiumInspector\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CesiumWidget\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CesiumWidget\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CirclesAndEllipses\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CirclesAndEllipses\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Clustering\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Clustering\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Corridor\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Corridor\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CustomDataSource\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CustomDataSource\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CylindersAndCones\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CylindersAndCones\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\CZML\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\CZML\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\DistanceDisplayConditions\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\DistanceDisplayConditions\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\GeoJsonAndTopJson\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\GeoJsonAndTopJson\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\GeoJsonSimpleStyle\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\GeoJsonSimpleStyle\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\GeometryAndAppearances\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\GeometryAndAppearances\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\GroundClamping\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\GroundClamping\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Video\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Video\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\TerrainExaggeration\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\TerrainExaggeration\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Terrain\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Terrain\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\StartBurst\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\StartBurst\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\SpheresAndEllipsoids\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\SpheresAndEllipsoids\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\ShowOrHideEntities\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\ShowOrHideEntities\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Shadows\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Shadows\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Rotatable2DMap\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Rotatable2DMap\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Rectangle\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Rectangle\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\PolylineVolume\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\PolylineVolume\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Polyline\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Polyline\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Polygon\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Polygon\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Point\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Point\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Picking\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Picking\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\PATerrain\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\PATerrain\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Material\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Material\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\MapPins\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\MapPins\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Label\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Label\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\KML\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\KML\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\Interpolation\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\Interpolation\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\ImageryLayersManipulation\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\ImageryLayersManipulation\index.d.ts" />
+    <TypeScriptCompile Include="CodeExamples\ImageryAdjustment\Earth.ts" />
+    <TypeScriptCompile Include="CodeExamples\ImageryAdjustment\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\ImageryLayers\Earth.ts" />
     <TypeScriptCompile Include="CodeExamples\ImageryLayers\index.d.ts" />
     <TypeScriptCompile Include="CodeExamples\HelloWord\Earth.ts" />
@@ -504,6 +722,150 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="CodeExamples\CameraTutorial\tsconfig.json" />
+    <Content Include="CodeExamples\CardBoard\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CardBoard\tsconfig.json" />
+    <Content Include="CodeExamples\CesiumInspector\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CesiumInspector\tsconfig.json" />
+    <Content Include="CodeExamples\CesiumWidget\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CesiumWidget\tsconfig.json" />
+    <Content Include="CodeExamples\CirclesAndEllipses\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CirclesAndEllipses\tsconfig.json" />
+    <Content Include="CodeExamples\Clustering\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Clustering\tsconfig.json" />
+    <Content Include="CodeExamples\Corridor\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Corridor\tsconfig.json" />
+    <Content Include="CodeExamples\CustomDataSource\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CustomDataSource\tsconfig.json" />
+    <Content Include="CodeExamples\CylindersAndCones\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CylindersAndCones\tsconfig.json" />
+    <Content Include="CodeExamples\CZML\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\CZML\tsconfig.json" />
+    <Content Include="CodeExamples\DistanceDisplayConditions\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\DistanceDisplayConditions\tsconfig.json" />
+    <Content Include="CodeExamples\GeoJsonAndTopJson\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GeoJsonAndTopJson\tsconfig.json" />
+    <Content Include="CodeExamples\GeoJsonSimpleStyle\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GeoJsonSimpleStyle\tsconfig.json" />
+    <Content Include="CodeExamples\GeometryAndAppearances\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GeometryAndAppearances\tsconfig.json" />
+    <Content Include="CodeExamples\GroundClamping\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\GroundClamping\tsconfig.json" />
+    <Content Include="CodeExamples\ImageryAdjustment\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\ImageryAdjustment\tsconfig.json" />
+    <Content Include="CodeExamples\ImageryLayersManipulation\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\ImageryLayersManipulation\tsconfig.json" />
+    <Content Include="CodeExamples\Interpolation\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Interpolation\tsconfig.json" />
+    <Content Include="CodeExamples\KML\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\KML\tsconfig.json" />
+    <Content Include="CodeExamples\Label\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Label\tsconfig.json" />
+    <Content Include="CodeExamples\MapPins\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\MapPins\tsconfig.json" />
+    <Content Include="CodeExamples\Material\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Material\tsconfig.json" />
+    <Content Include="CodeExamples\PATerrain\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\PATerrain\tsconfig.json" />
+    <Content Include="CodeExamples\Picking\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Picking\tsconfig.json" />
+    <Content Include="CodeExamples\Point\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Point\tsconfig.json" />
+    <Content Include="CodeExamples\Polygon\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Polygon\tsconfig.json" />
+    <Content Include="CodeExamples\Polyline\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Polyline\tsconfig.json" />
+    <Content Include="CodeExamples\PolylineVolume\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\PolylineVolume\tsconfig.json" />
+    <Content Include="CodeExamples\Rectangle\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Rectangle\tsconfig.json" />
+    <Content Include="CodeExamples\Rotatable2DMap\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Rotatable2DMap\tsconfig.json" />
+    <Content Include="CodeExamples\Shadows\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Shadows\tsconfig.json" />
+    <Content Include="CodeExamples\ShowOrHideEntities\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\ShowOrHideEntities\tsconfig.json" />
+    <Content Include="CodeExamples\SpheresAndEllipsoids\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\SpheresAndEllipsoids\tsconfig.json" />
+    <Content Include="CodeExamples\StartBurst\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\StartBurst\tsconfig.json" />
+    <Content Include="CodeExamples\Terrain\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Terrain\tsconfig.json" />
+    <Content Include="CodeExamples\TerrainExaggeration\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\TerrainExaggeration\tsconfig.json" />
+    <Content Include="CodeExamples\Video\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="CodeExamples\Video\tsconfig.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

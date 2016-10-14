@@ -34,8 +34,8 @@ function changeBillboardProperties() {
         }
     });
     var billboard = entity.billboard;
-    billboard.scale = 3.0;
-    billboard.color = Cesium.Color.WHITE.withAlpha(0.25);
+    billboard.scale = new Cesium.ConstantProperty(3.0);
+    billboard.color = new Cesium.ConstantProperty(Cesium.Color.WHITE.withAlpha(0.25));
 }
 function sizeBillboardInMeters() {
     var entity = viewer.entities.add({
