@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CesiumDemo", "CesiumDemo.csproj", "{B6F86C1B-3396-4729-A59F-DB83FB49FE4E}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DefinitelyTyped", "DefinitelyTyped", "{192D0E98-469D-49ED-A796-FBFAC7F33E04}"
+	ProjectSection(SolutionItems) = preProject
+		..\DefinitelyTyped\cesium.d.ts = ..\DefinitelyTyped\cesium.d.ts
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
