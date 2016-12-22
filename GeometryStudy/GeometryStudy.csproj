@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{A2496952-E84A-4D1A-8742-B265C142DBC4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>2.0</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.css" />
+    <Content Include="Cesium\Cesium.js" />
+    <Content Include="Cesium\Widgets\lighter.css" />
+    <Content Include="Cesium\Widgets\lighterShared.css" />
+    <Content Include="Cesium\Widgets\shared.css" />
+    <Content Include="Cesium\Widgets\widgets.css" />
+    <Content Include="Cesium\Workers\cesiumWorkerBootstrapper.js" />
+    <Content Include="Cesium\Workers\combineGeometry.js" />
+    <Content Include="Cesium\Workers\createBoxGeometry.js" />
+    <Content Include="Cesium\Workers\createBoxOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createCircleGeometry.js" />
+    <Content Include="Cesium\Workers\createCircleOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createCorridorGeometry.js" />
+    <Content Include="Cesium\Workers\createCorridorOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createCylinderGeometry.js" />
+    <Content Include="Cesium\Workers\createCylinderOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createEllipseGeometry.js" />
+    <Content Include="Cesium\Workers\createEllipseOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createEllipsoidGeometry.js" />
+    <Content Include="Cesium\Workers\createEllipsoidOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createGeometry.js" />
+    <Content Include="Cesium\Workers\createPointGeometry.js" />
+    <Content Include="Cesium\Workers\createPolygonGeometry.js" />
+    <Content Include="Cesium\Workers\createPolygonOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createPolylineGeometry.js" />
+    <Content Include="Cesium\Workers\createPolylineVolumeGeometry.js" />
+    <Content Include="Cesium\Workers\createPolylineVolumeOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createRectangleGeometry.js" />
+    <Content Include="Cesium\Workers\createRectangleOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createSimplePolylineGeometry.js" />
+    <Content Include="Cesium\Workers\createSphereGeometry.js" />
+    <Content Include="Cesium\Workers\createSphereOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\createVerticesFromHeightmap.js" />
+    <Content Include="Cesium\Workers\createVerticesFromQuantizedTerrainMesh.js" />
+    <Content Include="Cesium\Workers\createWallGeometry.js" />
+    <Content Include="Cesium\Workers\createWallOutlineGeometry.js" />
+    <Content Include="Cesium\Workers\transferTypedArrayTest.js" />
+    <Content Include="Cesium\Workers\upsampleQuantizedTerrainMesh.js" />
+    <Content Include="Content\checkerboard.jpg" />
+    <Content Include="Content\default.css" />
+    <Content Include="Content\shared.css" />
+    <Content Include="index.html" />
+    <Content Include="Study\EllipsoidSurfaceAppearance\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\EllipsoidSurfaceAppearance\index.html" />
+    <Content Include="Study\MaterialAppearance\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\MaterialAppearance\index.html" />
+    <Content Include="Study\First\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\First\index.html" />
+    <Content Include="Study\Template\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\Template\index.html" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="app.ts" />
+    <TypeScriptCompile Include="Scripts\typings\cesium\cesium.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\es6-promise\es6-promise.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\index.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout.es5\knockout.es5.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout\knockout.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\knockout\tests\jasmine.extensions.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\requirejs\require.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\when\when.d.ts" />
+    <TypeScriptCompile Include="Study\EllipsoidSurfaceAppearance\Earth.ts" />
+    <TypeScriptCompile Include="Study\EllipsoidSurfaceAppearance\index.d.ts" />
+    <TypeScriptCompile Include="Study\MaterialAppearance\Earth.ts" />
+    <TypeScriptCompile Include="Study\MaterialAppearance\index.d.ts" />
+    <TypeScriptCompile Include="Study\First\Earth.ts" />
+    <TypeScriptCompile Include="Study\First\index.d.ts" />
+    <TypeScriptCompile Include="Study\Template\Earth.ts" />
+    <TypeScriptCompile Include="Study\Template\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cesium\Assets\approximateTerrainHeights.json" />
+    <Content Include="packages.config" />
+    <Content Include="Study\Template\tsconfig.json" />
+    <Content Include="Study\Template\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\First\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\First\tsconfig.json" />
+    <Content Include="Study\MaterialAppearance\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\MaterialAppearance\tsconfig.json" />
+    <Content Include="Study\EllipsoidSurfaceAppearance\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\EllipsoidSurfaceAppearance\tsconfig.json" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Cesium\Assets\IAU2006_XYS\" />
+    <Folder Include="Cesium\Assets\Textures\" />
+    <Folder Include="Cesium\ThirdParty\Workers\" />
+    <Folder Include="Cesium\Widgets\Animation\" />
+    <Folder Include="Cesium\Widgets\BaseLayerPicker\" />
+    <Folder Include="Cesium\Widgets\CesiumInspector\" />
+    <Folder Include="Cesium\Widgets\CesiumWidget\" />
+    <Folder Include="Cesium\Widgets\FullscreenButton\" />
+    <Folder Include="Cesium\Widgets\Geocoder\" />
+    <Folder Include="Cesium\Widgets\Images\" />
+    <Folder Include="Cesium\Widgets\InfoBox\" />
+    <Folder Include="Cesium\Widgets\NavigationHelpButton\" />
+    <Folder Include="Cesium\Widgets\PerformanceWatchdog\" />
+    <Folder Include="Cesium\Widgets\SceneModePicker\" />
+    <Folder Include="Cesium\Widgets\SelectionIndicator\" />
+    <Folder Include="Cesium\Widgets\Timeline\" />
+    <Folder Include="Cesium\Widgets\Viewer\" />
+    <Folder Include="Cesium\Widgets\VRButton\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>GeometryStudy</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3569</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3569/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+</Project>
