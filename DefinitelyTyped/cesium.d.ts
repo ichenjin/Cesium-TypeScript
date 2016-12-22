@@ -1170,9 +1170,9 @@
 
         //Methods
         destroy(): void;
-        getHeight(cartographic: Cartographic): number | void;
+        getHeight(cartographic: Cartographic): number;
         isDestroyed(): boolean;
-        pick(ray: Ray, scene: Scene, result?: Cartesian3): Cartesian3 | void;
+        pick(ray: Ray, scene: Scene, result?: Cartesian3): Cartesian3;
 
     }
 
@@ -3550,7 +3550,7 @@
         //Members
         attributes: GeometryAttributes;
         boundingSphere: BoundingSphere;
-        indices: Array<any>;
+        indices: Uint16Array | Uint32Array;
         primitiveType: PrimitiveType;
 
 
@@ -3559,9 +3559,17 @@
 
     }
 
+    export interface GeometryAttributesOptions {
+        binormal?: GeometryAttribute;
+        color?: GeometryAttribute;
+        normal?: GeometryAttribute;
+        position?: GeometryAttribute;
+        st?: GeometryAttribute;
+        tangent?: GeometryAttribute;
+    }
 
     export class GeometryAttributes {
-        constructor();
+        constructor(options?: GeometryAttributesOptions);
         //Members
         binormal: GeometryAttribute;
         color: GeometryAttribute;
@@ -3622,20 +3630,14 @@
     }
 
 
-    export class PrimitiveType {
-        constructor();
-        //Members
-        static LINE_LOOP: number;
-        static LINE_STRIP: number;
-        static LINES: number;
-        static POINTS: number;
-        static TRIANGLE_FAN: number;
-        static TRIANGLE_STRIP: number;
-        static TRIANGLES: number;
-
-
-        //Methods
-
+    export enum PrimitiveType {
+        LINE_LOOP,
+        LINE_STRIP,
+        LINES,
+        POINTS,
+        TRIANGLE_FAN,
+        TRIANGLE_STRIP,
+        TRIANGLES
     }
 
 
@@ -5837,16 +5839,16 @@
 
 
         //Methods
-        static lineSegmentSphere(p0: Cartesian3, p1: Cartesian3, sphere: BoundingSphere, result?: any): Object;
+        static lineSegmentSphere(p0: Cartesian3, p1: Cartesian3, sphere: BoundingSphere, result?: any): any;
         static lineSegmentTriangle(v0: Cartesian3, v1: Cartesian3, p0: Cartesian3, p1: Cartesian3, p2: Cartesian3, cullBackFaces?: boolean, result?: Cartesian3): Cartesian3;
-        static raySphere(ray: Ray, sphere: BoundingSphere, result?: any): Object;
+        static raySphere(ray: Ray, sphere: BoundingSphere, result?: any): any;
         static rayTriangle(ray: Ray, p0: Cartesian3, p1: Cartesian3, p2: Cartesian3, cullBackFaces?: boolean, result?: Cartesian3): Cartesian3;
         static rayTriangleParametric(ray: Ray, p0: Cartesian3, p1: Cartesian3, p2: Cartesian3, cullBackFaces?: boolean): number;
         static grazingAltitudeLocation(ray: Ray, ellipsoid: Ellipsoid): Cartesian3;
         static lineSegmentPlane(endPoint0: Cartesian3, endPoint1: Cartesian3, plane: Plane, result?: Cartesian3): Cartesian3;
-        static rayEllipsoid(ray: Ray, ellipsoid: Ellipsoid): Object;
+        static rayEllipsoid(ray: Ray, ellipsoid: Ellipsoid): any;
         static rayPlane(ray: Ray, plane: Plane, result?: Cartesian3): Cartesian3;
-        static trianglePlaneIntersection(p0: Cartesian3, p1: Cartesian3, p2: Cartesian3, plane: Plane): Object;
+        static trianglePlaneIntersection(p0: Cartesian3, p1: Cartesian3, p2: Cartesian3, plane: Plane): any;
 
     }
 
@@ -6969,14 +6971,14 @@
     }
 
 
-    export class PolylineGeometry {
+    export class PolylineGeometry extends Geometry {
         constructor(options?: PolylineGeometryOptions);
         //Members
         packedLength: number;
 
 
         //Methods
-        static createGeometry(polylineGeometry: PolylineGeometry): Geometry | void;
+        static createGeometry(polylineGeometry: PolylineGeometry): Geometry;
         static pack(value: PolylineGeometry, array: Array<number>, startingIndex?: number): Array<number>;
         static unpack(array: Array<number>, startingIndex?: number, result?: PolylineGeometry): PolylineGeometry;
 
