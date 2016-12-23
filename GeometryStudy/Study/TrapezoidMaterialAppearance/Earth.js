@@ -1,3 +1,8 @@
+function getShaderSource(id) {
+    return document.getElementById(id).innerText;
+}
+var vertexShaderSource = getShaderSource("vertexshader");
+var fragmentShaderSource = getShaderSource("fragmentshader");
 var viewer = new Cesium.Viewer('cesiumContainer', {
     infoBox: false,
     selectionIndicator: false,
@@ -40,11 +45,15 @@ var colorMaterial = new Cesium.Material({
         },
     }
 });
+var appearance = new Cesium.MaterialAppearance({
+    material: imageMaterial,
+    fragmentShaderSource: fragmentShaderSource,
+    vertexShaderSource: vertexShaderSource,
+    flat: true,
+});
 var primitive = new Cesium.Primitive({
     geometryInstances: instance,
-    appearance: new Cesium.MaterialAppearance({
-        material: imageMaterial,
-    })
+    appearance: appearance
 });
 viewer.scene.primitives.add(primitive);
 viewer.camera.lookAt(Cesium.Cartesian3.fromDegrees(centerLon, centerLat), new Cesium.Cartesian3(0, 0, height * 2));

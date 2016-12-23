@@ -1,4 +1,11 @@
-﻿let viewer = new Cesium.Viewer('cesiumContainer', {
+﻿function getShaderSource(id: string) {
+    return document.getElementById(id).innerText;
+}
+
+let vertexShaderSource = getShaderSource("vertexshader");
+let fragmentShaderSource = getShaderSource("fragmentshader");
+
+let viewer = new Cesium.Viewer('cesiumContainer', {
     infoBox: false,
     selectionIndicator: false,
     shadows: true
@@ -49,11 +56,16 @@ let colorMaterial = new Cesium.Material({
     }
 })
 
+let appearance = new Cesium.MaterialAppearance({
+    material: imageMaterial,
+    fragmentShaderSource: fragmentShaderSource,
+    vertexShaderSource: vertexShaderSource,
+    flat: true,
+})
+
 let primitive = new Cesium.Primitive({
     geometryInstances: instance,
-    appearance: new Cesium.MaterialAppearance({
-        material: imageMaterial,
-    })
+    appearance: appearance
 });
 
 viewer.scene.primitives.add(primitive);

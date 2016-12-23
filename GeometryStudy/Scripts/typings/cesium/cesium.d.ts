@@ -6764,7 +6764,7 @@
 
 
         //Methods
-        static createGeometry(polygonGeometry: PolygonGeometry): Geometry | void;
+        static createGeometry(polygonGeometry: PolygonGeometry): Geometry;
         static fromPositions(options?: fromPositionsOptions): PolygonGeometry;
         static pack(value: PolygonGeometry, array: Array<number>, startingIndex?: number): Array<number>;
         static unpack(array: Array<number>, startingIndex?: number, result?: PolygonGeometry): void;

@@ -72,6 +72,10 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="Study\MaterialAppearance\index.html" />
+    <Content Include="Study\TrapezoidMaterialAppearance\Earth.js">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\TrapezoidMaterialAppearance\index.html" />
     <Content Include="Study\First\Earth.js">
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
@@ -96,6 +100,8 @@
     <TypeScriptCompile Include="Study\EllipsoidSurfaceAppearance\index.d.ts" />
     <TypeScriptCompile Include="Study\MaterialAppearance\Earth.ts" />
     <TypeScriptCompile Include="Study\MaterialAppearance\index.d.ts" />
+    <TypeScriptCompile Include="Study\TrapezoidMaterialAppearance\Earth.ts" />
+    <TypeScriptCompile Include="Study\TrapezoidMaterialAppearance\index.d.ts" />
     <TypeScriptCompile Include="Study\First\Earth.ts" />
     <TypeScriptCompile Include="Study\First\index.d.ts" />
     <TypeScriptCompile Include="Study\Template\Earth.ts" />
@@ -112,14 +118,18 @@
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="Study\First\tsconfig.json" />
-    <Content Include="Study\MaterialAppearance\Earth.js.map">
+    <Content Include="Study\TrapezoidMaterialAppearance\Earth.js.map">
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
-    <Content Include="Study\MaterialAppearance\tsconfig.json" />
+    <Content Include="Study\TrapezoidMaterialAppearance\tsconfig.json" />
     <Content Include="Study\EllipsoidSurfaceAppearance\Earth.js.map">
       <DependentUpon>Earth.ts</DependentUpon>
     </Content>
     <Content Include="Study\EllipsoidSurfaceAppearance\tsconfig.json" />
+    <Content Include="Study\MaterialAppearance\Earth.js.map">
+      <DependentUpon>Earth.ts</DependentUpon>
+    </Content>
+    <Content Include="Study\MaterialAppearance\tsconfig.json" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
